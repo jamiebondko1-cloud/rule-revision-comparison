@@ -121,13 +121,17 @@
 
   /* ── 비교표(개정 항목) ── */
   table.cmp{width:100%; border-collapse:separate; border-spacing:0; background:#fff;
-    border:1px solid var(--line); border-radius:10px; overflow:hidden;
+    border:1px solid var(--line); border-radius:10px;
     box-shadow:0 1px 3px rgba(15,30,60,.06); table-layout:fixed; margin-bottom:18px;}
   table.cmp thead th{
-    position:sticky; top:41px; z-index:5; background:var(--head); color:#fff;
+    background:var(--head); color:#fff;
     padding:11px 12px; font-size:13.5px; text-align:center; border-bottom:2px solid #16304e;
   }
   table.cmp thead th:not(:last-child){border-right:1px solid rgba(255,255,255,.18);}
+  table.cmp thead tr:first-child th:first-child{border-top-left-radius:9px;}
+  table.cmp thead tr:first-child th:last-child{border-top-right-radius:9px;}
+  table.cmp tbody tr:last-child td:first-child{border-bottom-left-radius:9px;}
+  table.cmp tbody tr:last-child td:last-child{border-bottom-right-radius:9px;}
   table.cmp col.c-no{width:78px;}
   table.cmp col.c-old{width:30%;}
   table.cmp col.c-new{width:30%;}
